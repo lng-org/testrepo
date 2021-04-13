@@ -35,5 +35,5 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Detecting Biased Language
-        uses: lng-org/pinkpanther@1
+        uses: lng-org/pinkpanther@2
 
