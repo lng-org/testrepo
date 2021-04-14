@@ -14,6 +14,17 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
+  pinkpanther:
+    runs-on: ubuntu-latest
+    name: Detect biased language
+    steps:
+      - name: Check code for biased language
+      - uses: actions/checkout@v2
+      - id: pinkpanther
+        uses: lng-org/pinkpanther@master
+        with:
+          hannibal-token: ${{secrets.PINK_PANTHER_HANNIBAL_TOKEN_D04092021}}
+    
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -32,6 +43,3 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          
-      - name: Detecting Biased Language
-        uses: lng-org/pinkpanther@master
