@@ -19,11 +19,11 @@ jobs:
     name: Detect biased language
     steps:
       - name: Check code for biased language
-#       - uses: actions/checkout@v2
-      - id: pinkpanther
-        uses: lng-org/pinkpanther@master
-        with:
-          hannibal-token: ${{secrets.PINK_PANTHER_HANNIBAL_TOKEN_D04092021}}
+      - uses: actions/checkout@v2
+#       - id: pinkpanther
+#         uses: lng-org/pinkpanther@master
+#         with:
+#           hannibal-token: ${{secrets.PINK_PANTHER_HANNIBAL_TOKEN_D04092021}}
     
   build:
     # The type of runner that the job will run on
