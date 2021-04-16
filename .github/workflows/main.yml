@@ -14,15 +14,9 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  auth:
-    runs-on: ubuntu-latest
-    name: Auth
-    steps:
-      - run: echo "${{secrets.GITHUB_TOKEN}}" | docker login ghcr.io -u ${{github.actor}} --password-stdin
   biased_lang:
     runs-on: ubuntu-latest
     name: Detect biased language
-    needs: auth
     steps:
       - uses: actions/checkout@v2
 #       - id: docker-login
