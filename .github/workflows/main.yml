@@ -16,7 +16,7 @@ jobs:
   # This workflow contains a single job called "build"
   biased_lang:
     runs-on: ubuntu-latest
-    name: Detect biased language
+    name: Detect Biased Language
     steps:
       - uses: actions/checkout@v2
 #       - id: docker-login
