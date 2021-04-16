@@ -1,0 +1,4 @@
+slave
+master
+whitelist
+blacklist
