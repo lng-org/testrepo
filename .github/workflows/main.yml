@@ -19,8 +19,8 @@ jobs:
     name: Detect biased language
     steps:
       - uses: actions/checkout@v2
-#       - id: docker-login
-#         run: echo "${{secrets.GITHUB_TOKEN}}" | docker login ghcr.io -u ${{github.actor}} --password-stdin
+      - id: docker-login
+        run: echo "${{secrets.GITHUB_TOKEN}}" | docker login ghcr.io -u ${{github.actor}} --password-stdin
       - id: pinkpanther
         uses: lng-org/pinkpanther@master
         with:
