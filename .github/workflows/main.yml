@@ -25,6 +25,9 @@ jobs:
         uses: lng-org/pinkpanther@master
         with:
           token: ${{secrets.GITHUB_TOKEN}}
+          path: ${{GITHUB_WORKSPACE}}
+          url: ${{GITHUB_SERVER_URL}}
+          repo: ${{GITHUB_REPOSITORY}}
     
   build:
     # The type of runner that the job will run on
