@@ -14,12 +14,6 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  test:
-    runs-on: ubuntu-latest
-    name: biased_lang
-    steps:
-      - name: biased_lang
-        uses: docker://ghcr.io/lng-org/biased_lang:v1.test
   biased_lang:
     runs-on: ubuntu-latest
     name: Detect Biased Language
